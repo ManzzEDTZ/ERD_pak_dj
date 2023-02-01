@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('frontend.partials.navbar');
+    return view('frontend.partials.navbarLoggedIn');
 });
