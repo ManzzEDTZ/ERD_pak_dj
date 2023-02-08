@@ -26,7 +26,7 @@
                         <ul class="navbar-nav">
                             <li class="nav-item" style="min-width: 50rem;">
                                 <div class="input-group">
-                                    <input class="form-control py-2 border-right-0 border" type="search" placeholder="Search for anything" id="search-input">
+                                    <input class="form-control py-2 border-right-0 border" type="search" placeholder="Search for anything" id="search-input" >
                                     <span class="input-group-append">
                                         <button class="btn btn-outline-secondary border-left-0 border" type="button">
                                             <i class="fa fa-search"></i>

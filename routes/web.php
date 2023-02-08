@@ -14,5 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('frontend.partials.navbarLoggedIn');
+    return view('frontend.layouts.main');
+});
+
+Route::controller(App\Http\Controllers\RegisterController::class)->group(function () {
+    Route::get('/register', 'index');
+    Route::post('/register', 'store')->name('register');
+});
+
+Route::controller(App\Http\Controllers\LoginController::class)->group(function () {
+    Route::get('/login', 'index');
+    Route::post('/login', 'login')->name('login');
+    Route::get('/logout', 'logout')->name('logout');
 });
