@@ -26,6 +26,7 @@
                     <a href="" style="color:black">Mengajar Di Ruscation</a>
                     
                 </div>
+                @guest
                 <div class="col-auto">
                     <button class="btn border-left-0 border-0" type="button" style="background-color:transparent;">
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -38,6 +39,33 @@
                 <div class="col-auto">
                     <button type="button" class="btn btn-dark">Log In</button>
                 </div>
+                @endguest
+                @auth
+                <div class="col-auto">
+                        <a href="" style="color:black">Pelajaran Saya</a>
+                        
+                </div>
+                <div class="col-auto">
+                    <button class="btn border-left-0 border-0" type="button" style="background-color:transparent;">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+                <div class="col-auto">
+                    <button class="btn border-left-0 border-0" type="button" style="background-color:transparent;">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                </div>
+                <div class="col-auto">
+                    <button class="btn border-left-0 border-0" type="button" style="background-color:transparent;">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+                </div>
+                <div class="col-auto">
+                    <button class="btn border-left-0 border-0" type="button" style="background-color:transparent;">
+                        <i class="fa-regular fa-user"></i>
+                    </button>
+                </div>
+                @endauth
             </div>
         </div>
     </div>
