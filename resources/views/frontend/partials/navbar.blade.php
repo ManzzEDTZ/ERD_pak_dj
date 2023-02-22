@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar" style="border:5px solid black">
     <div class="container-fluid">
         <div class="row align-items-center container-fluid">
             <div class="col-auto">

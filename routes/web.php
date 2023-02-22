@@ -14,8 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('frontend.layouts.main');
+    return view('frontend.homepage');
 });
+
+Route::get('/course', function () {
+    return view('frontend.course');
+});
+
 
 Route::controller(App\Http\Controllers\RegisterController::class)->group(function () {
     Route::get('/register', 'index');
