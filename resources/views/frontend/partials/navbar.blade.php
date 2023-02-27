@@ -2,11 +2,11 @@
     <div class="container-fluid">
         <div class="row align-items-center container-fluid">
             <div class="col-auto">
-                <a class="navbar-brand mr-5" href="#"><embed src="{{ asset('assets/image/logo.svg') }}"></a>
+                <a class="navbar-brand mr-5" href="/"><embed src="{{ asset('assets/image/logo.svg') }}"></a>
             </div>
             <div class="col">
                 <div class="input-group" >
-                    <input type="text" class="form-control" placeholder="Search ......" aria-label="" style="width: 80%;">
+                    <input type="text" class="form-control" placeholder="Search..." aria-label="" style="width: 80%;">
                     <div class="input-group-append">
                         <span class="input-group-text"><i class="fa fa-search"></i></span>
                     </div>

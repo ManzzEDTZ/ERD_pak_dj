@@ -32,3 +32,11 @@ Route::controller(App\Http\Controllers\LoginController::class)->group(function (
     Route::post('/login', 'login')->name('login');
     Route::get('/logout', 'logout')->name('logout');
 });
+
+Route::get('/courses', function () {
+    return view('frontend.courses');
+});
+
+Route::get('/checkout', function () {
+    return view('frontend.checkout');
+});
