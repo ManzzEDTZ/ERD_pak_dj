@@ -87,11 +87,6 @@
     width: 500px;
     overflow: hidden;
   }
-  @media (max-width: 980px) {
-    .box-form .right {
-      /* width: 100%; */
-    }
-  }
   .box-form .right h5 {
     padding-left: 100px;
     font-size: 2vmax;
