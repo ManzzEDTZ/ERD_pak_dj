@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/homepage', function () {
     return view('frontend.homepage');
 });
 
-Route::get('/course', function () {
-    return view('frontend.course');
+Route::get('/detail', function () {
+    return view('frontend.detail');
 });
 
 
