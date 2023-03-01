@@ -21,6 +21,10 @@ Route::get('/course', function () {
     return view('frontend.course');
 });
 
+Route::get('/detail', function () {
+    return view('frontend.detail');
+});
+
 
 Route::controller(App\Http\Controllers\RegisterController::class)->group(function () {
     Route::get('/register', 'index');
