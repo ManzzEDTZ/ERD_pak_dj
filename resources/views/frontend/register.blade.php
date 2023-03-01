@@ -1,6 +1,7 @@
 @extends('frontend.layouts.main')
 @section('content')
 
+
 <style>
   body {
     background-image: white;
@@ -229,9 +230,6 @@
 <!-- partial -->
   
 </body>
-</html>
 
-   </body>
-</html>
 
 @endsection
