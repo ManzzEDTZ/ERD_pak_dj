@@ -53,8 +53,8 @@
   }
 
   .box-form .left .overlay .span img {
-    padding-top: 60px;
-    padding-left: 200px;
+    padding-top: 500px;
+    padding-left: 100px;
     width: 230px;
     height: 230px;
   }
@@ -65,7 +65,7 @@
   }
 
     .box-form .left .overlay h3 {
-    padding-top: 100px;
+    padding-top: 200px;
     font-size: 10;
     }
 
@@ -197,7 +197,7 @@
 		<div class="overlay">
 		<span>
 			<h2>Welcome Back !</h2>	
-            <img src="{{asset('assets/image/young man sitting with a laptop and waving his hand.png')}}" alt="Logo-Ruscation" border="0" width="200px" height="">
+            <img src="{{asset('assets/image/young man sitting with a laptop and waving his hand.png')}}" alt="Logo-Ruscation" border="0" >
             <!-- <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 			<a href="#"><i class="fa fa-google" aria-hidden="true"></i></a> -->
             <h3>Untuk  mengakses RUSCATION mohon login dengan data diri anda</h3>
