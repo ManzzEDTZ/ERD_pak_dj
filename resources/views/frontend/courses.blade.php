@@ -17,7 +17,7 @@
 </style>
 <main>
     <div class="container-fluid" style="padding-top: 26px; padding-left: 80px; padding-right:80px">
-        <button class="btn border-left-0 border-0" type="button" style="background-color:transparent;">
+        <button class="btn border-left-0 border-0" type="button" style="background-color:transparent;" onclick="history.back()">
             <i class="fa-solid fa-chevron-left fa-xl"></i>
         </button>
 
