@@ -257,9 +257,11 @@
                     </a>
                     <div class="card-container">
                         <div class="card-wrap">
-                            <div class="card-image">
-                                <img src="{{ asset('assets/image/icon/jsicon.png') }}" alt="JavaScript Icon">
-                            </div>
+                            <a href="#">
+                                <div class="card-image">
+                                    <img src="{{ asset('assets/image/icon/jsicon.png') }}" alt="JavaScript Icon">
+                                </div>
+                            </a>
                             <div class="card-image">
                                 <img src="{{ asset('assets/image/icon/pyicon.png') }}" alt="Python Icon">
                             </div>
