@@ -17,10 +17,6 @@ Route::get('/homepage', function () {
     return view('frontend.homepage');
 });
 
-Route::get('/course', function () {
-    return view('frontend.course');
-});
-
 Route::get('/detail', function () {
     return view('frontend.detail');
 });
@@ -35,4 +31,12 @@ Route::controller(App\Http\Controllers\LoginController::class)->group(function (
     Route::get('/login', 'index');
     Route::post('/login', 'login')->name('login');
     Route::get('/logout', 'logout')->name('logout');
+});
+
+Route::get('/courses', function () {
+    return view('frontend.courses');
+});
+
+Route::get('/checkout', function () {
+    return view('frontend.checkout');
 });
