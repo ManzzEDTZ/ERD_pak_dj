@@ -1,6 +1,21 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\HomeComponent;
+use App\Http\Livewire\ShopComponent;
+use App\Http\Livewire\CartComponent;
+use App\Http\Livewire\CheckoutComponent;
+use App\Http\Livewire\DetailsComponent;
+use App\Http\Livewire\User\UserDashboardComponent;
+use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Livewire\Admin\AdminCategoriesComponent;
+use App\Http\Livewire\Admin\AdminAddCategoriesComponent;
+use App\Http\Livewire\Admin\AdminEditCategoriesComponent;
+use App\Http\Livewire\Admin\AdminProductComponent;
+use App\Http\Livewire\Admin\AdminAddProductComponent;
+use App\Http\Livewire\CategoryComponent;
+use App\Http\Livewire\SearchComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,17 +28,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.layouts.main');
+Route::get('/laravel', function () {
+    return view('welcome');
 });
 
-Route::controller(App\Http\Controllers\RegisterController::class)->group(function () {
-    Route::get('/register', 'index');
-    Route::post('/register', 'store')->name('register');
+Route::get('/',HomeComponent::class)->name('home.index');
+
+Route::get('/shop',ShopComponent::class)->name('shop');
+
+Route::get('/product/{slug}',DetailsComponent::class)->name('product.details');
+
+Route::get('/cart',CartComponent::class)->name('shop.cart');
+
+Route::get('/checkout',CheckoutComponent::class)->name('shop.checkout');
+
+Route::get('/product-category/{slug}',CategoryComponent::class)->name('product.category');
+
+Route::get('/search', SearchComponent::class)->name('product.search');
+
+Route::middleware(['auth'])->group(function() {
+    Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
 });
 
-Route::controller(App\Http\Controllers\LoginController::class)->group(function () {
-    Route::get('/login', 'index');
-    Route::post('/login', 'login')->name('login');
-    Route::get('/logout', 'logout')->name('logout');
+Route::middleware(['auth','authadmin'])->group(function() {
+    Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
+    Route::get('/admin/categories', AdminCategoriesComponent::class)->name('admin.categories');
+    Route::get('/admin/categories/add', AdminAddCategoriesComponent::class)->name('admin.categories.add');
+    Route::get('/admin/categories/edit/{category_id}', AdminEditCategoriesComponent::class)->name('admin.categories.edit');
+    Route::get('/admin/products', AdminProductComponent::class)->name('admin.products');
+    Route::get('/admin/products/add', AdminAddProductComponent::class)->name('admin.products.add');
 });
+
+require __DIR__.'/auth.php';
