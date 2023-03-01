@@ -14,8 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('frontend.layouts.main');
+    return view('frontend.homepage');
 });
+
+Route::get('/course', function () {
+    return view('frontend.course');
+});
+
 
 Route::controller(App\Http\Controllers\RegisterController::class)->group(function () {
     Route::get('/register', 'index');
@@ -26,4 +31,12 @@ Route::controller(App\Http\Controllers\LoginController::class)->group(function (
     Route::get('/login', 'index');
     Route::post('/login', 'login')->name('login');
     Route::get('/logout', 'logout')->name('logout');
+});
+
+Route::get('/courses', function () {
+    return view('frontend.courses');
+});
+
+Route::get('/checkout', function () {
+    return view('frontend.checkout');
 });
